@@ -3,7 +3,9 @@
 const BLOG = {
   API_BASE_URL: process.env.API_BASE_URL || 'https://sudsy-produce-603.notion.site/api/v3', 
   NOTION_PAGE_ID: process.env.NOTION_PAGE_ID || '2cf823cdbdc281419b68f9a1015694c7',
-  THEME: process.env.NEXT_PUBLIC_THEME || 'heo', // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
+  // 当前主题，在themes文件夹下可找到所有支持的主题；主题名称就是文件夹名，
+  // 例如 example,fukasawa,gitbook,heo,hexo,landing,matery,medium,next,nobelium,plog,simple
+  THEME: process.env.NEXT_PUBLIC_THEME || 'heo', 
   LANG: process.env.NEXT_PUBLIC_LANG || 'zh-CN', // e.g 'zh-CN','en-US'  see /lib/lang.js for more.
   SINCE: process.env.NEXT_PUBLIC_SINCE || 2021, // e.g if leave this empty, current year will be used.
 
