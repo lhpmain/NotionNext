@@ -1,0 +1,14 @@
+name: Watch-Notion
+on:
+  schedule:               # 每 10 分钟检查一次
+    - cron: '*/10 * * * *'
+  workflow_dispatch:      # 也可以手动点运行
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 请求 Vercel 再验证
+        run: |
+          curl -X POST ${{ secrets.VERCEL_DEPLOY_HOOK }} \
+               -H "Content-Type: application/json"
